@@ -1,0 +1,19 @@
+= springfox-swagger-sample
+
+A basic Spring Boot app with single RESTController serving randomly generated data using Podam Factory. Showcases a few different configurations for documenting web services using Springfox Swagger. 
+
+To use Springfox, your controllers will need to be annotated with @RequestMapping at the class level (regardless of method-level annotations). Additionally, you will need a configuration class 
+annotated with @EnableSwagger2 and at least one @Bean that returns a Docket instance. You can find this in the SwaggerConfig class.
+
+Different configurations can be enabled by switching between the following Spring Profiles using the spring.profiles.active property in application.properties. 
+
+. swagger-basic - barebones configuration 
+. swagger-security - adds a required header (ie. "Authorization = Bearer {OAuth2 Token}) 
+. swagger-custom - other customizations including reading API info from a properties file.
+
+Swagger UI:
+http://localhost:8080/swagger-ui.html
+
+== Prerequisites 
+
+*Lombok* - To run this code from eclipse, you'll need to install https://projectlombok.org/[Lombok]. 
