@@ -1,2 +1,4 @@
 /.apt_generated/
 /target/
+/*.iml
+/src/gen/java/
